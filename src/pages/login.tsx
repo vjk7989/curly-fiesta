@@ -63,7 +63,7 @@ export default function Login() {
             />
             <div className={styles.nftDetails}>
               <h4>{contractMetadata.name}</h4>
-              <p>{contractMetadata.description.substring(0, 100)}...</p>
+              {/* <p>{contractMetadata.description.substring(0, 100)}...</p> */}
             </div>
           </div>
         )}
@@ -100,7 +100,7 @@ export async function getServerSideProps(context) {
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
-    "mumbai",
+    "sepolia",
     { secretKey }
   );
 
